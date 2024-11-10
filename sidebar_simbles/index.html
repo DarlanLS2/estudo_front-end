@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <aside id="minhaSidebar" class="sideBar">
+    <!-- esse &times; é apenas um icone de X-->
+    <!-- esse href="javascript:void(0)" apenas inpede que o link faça a função padrao de redirecionar para uma pagina-->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
+    <a href="#">seila porra</a>
+    <a href="#">seila porra</a>
+    <a href="#">seila porra</a>
+  </aside>
+
+  <button onclick="openNav()"> menu </button>
+
+  <main id="main">
+    <p>seila caralho de assas to com sono vai se foder.</p>
+  </main>
+</body>
+
+<script>
+  /* Almenta o tamanho da sidebar fazendo ela aparecer na tela, e tambem defina o main para ter uma margin-left
+  do mesmo tamaho que a width do sidebar fazendo o conteudo do main ir para o lado da sidebar*/
+  const openNav = () => {
+    document.getElementById("minhaSidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  /* Diminui o tamanho da sidebar fazendo ela desaparecer da tela. e tambem redefine a margin-left do main para
+  0 fazendo ele voltar para a posição normal*/
+  const closeNav = () => {
+    document.getElementById("minhaSidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+  }
+</script>
+</html>

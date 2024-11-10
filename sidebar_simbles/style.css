@@ -1,0 +1,43 @@
+.sideBar {
+  height: 100%;
+  width: 0; /* deixa ele inexistente, so aparece com a função*/
+  position: fixed; /* importante para ficar fixado no lugar e nao interferir com o resto dos componentes*/
+  z-index: 1; /* Stay on top */
+  top: 0; /* faz com com que fique colado no topo*/
+  left: 0;  /*faz com que fique colado na esquerda*/
+  background-color: #111;
+  overFlow-x: hidden; /* disabilita a função de scrollar para cima e baixo */
+  padding-top: 60px;
+  transition: 0.5s; /* deixa qualquer alteração feita nele mais fluida adicionando um delay */
+}
+
+.sideBar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: flex;
+  transition: 0.3s; /* deixa qualquer alteração feita nele mais fluida adicionando um delay */
+}
+.sideBar a:hover {
+  color: #f1f1f1;
+}
+
+.sideBar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+main {
+  transition: margin-left .5s; /* deixa a alteração do margin-left feita nele mais fluida adicionando um delay */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sideBav {padding-top: 15px;}
+  .sideBav a {font-size: 18px;}
+}
