@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+} 
+
+.popup {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(0, 0%, 0%, 0.7);
+  position: absolute; /* faz ele ser posicionado de acordo com o elemento pai usando right, left, top. bottom */
+  top: 0;
+  left: 0;
+
+  display: none; /* displau none faz com que o elemento e as coisas dentro dele nao exista*/
+  justify-content: center;
+  align-items: center;
+}
+
+.popup .content {
+  background-color: #FFF;
+  padding: 1rem;
+  width: 30%;
+  height: 30vh;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* faz ele se tornar um elemento pai */
+}
+
+.popup .content button {
+  position: absolute; /* se posiciona de acordo com o elemento pai mais proximo (.content)*/
+  top: 1rem;
+  right: 1rem;
+}

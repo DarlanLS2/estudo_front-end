@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main>
+    <button onclick="openPopup()" id="btnOpen">Open Form</button>
+  </main>
+
+  <div class="popup" id="popup">
+    <section class="content">
+      <button  onclick="closePopup()" id="btnClose">&times;</button>
+      <h1>Meu popup</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni repellendus dolorum in? Temporibus esse ipsa ad expedita, dolor enim ipsam ut at maiores quos. Praesentium provident maxime delectus quisquam voluptatibus quasi assumenda, minus fugit corrupti vel voluptate aliquid expedita cupiditate, saepe tempore blanditiis ipsam? Nihil excepturi ex cum aspernatur optio?
+      </p>
+    </section>
+  </div>
+</body>
+
+<script>
+  /* faz o .popup existir deixando de ser display none e virando flex */
+  let openPopup = () => {
+    document.getElementById("popup").style.display = "flex"; 
+  }
+  /* faz o .popup voltar a inexistencia com display none */
+  let closePopup = () => {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
+</html>
