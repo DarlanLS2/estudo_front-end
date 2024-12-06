@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <button id="button" class="button">Click</button>
+    <div id="popup" class="popup">
+      <h1 class="popup__title">titulo</h1>
+      <p class="popup__text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem vitae
+        facilis dignissimos inventore labore nam dolore modi pariatur veritatis
+        unde cumque debitis expedita illum alias non molestias nihil,
+        repudiandae suscipit veniam! Animi laboriosam explicabo vel iusto, saepe
+        optio. Eligendi ea dolor atque a quis optio ab suscipit eius amet natus?
+      </p>
+      <button id="popup__button" class="popup__button">close</button>
+    </div>
+
+    <script>
+      // Elementos
+      const button = document.getElementById("button");
+      const popup = document.getElementById("popup");
+      const closeButton = document.getElementById("popup__button");
+      /* Executa uma funçao se o elemento for clicado */
+      button.addEventListener("click", () => {
+        popup.style.display = "flex"; // Modifica o display do elemento
+        popup.classList.add("popup--active"); // Adiciona uma classe ao elemento
+      });
+      /* Executa uma funçao se o elemento for clicado */
+      closeButton.addEventListener("click", () => {
+        /* Verifica se o elemento possui uma classe */
+        if (popup.classList.contains("popup--active")) {
+          popup.classList.remove("popup--active"); // Remove uma classe do elemento
+          popup.style.display = "flex"; // Modifica o display do elemento
+          popup.style.visibility = "visible"; // Modifica o visibility do elemento
+          popup.classList.add("popup--disable"); // Adiciona uma classe ao elemento
+          /* Ao fim da animação executa uma função */
+          popup.addEventListener("animationend", () => {
+            popup.classList.remove("popup--disable"); // Remove uma classe de um elemento
+            popup.style.visibility = "hidden"; // Modifica o visibility do elemento
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
