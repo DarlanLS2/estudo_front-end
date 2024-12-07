@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono";
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 600px;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+.main__title {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+/* O after serve para adicionar algo depois 
+do elemento,evitando poluição de codigo */
+.main__title::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  display: block;
+  margin: 1rem 0;
+}
+.main__text {
+  font-weight: 400;
+}
+/* O before serve para adicionar algo antes 
+do elemento,evitando poluição de codigo */
+.main__text::before {
+  content: "Text:";
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+}
