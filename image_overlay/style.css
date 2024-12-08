@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.main {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 30%;
+  height: 80%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  padding: 2rem
+}
+.main__box-image {
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+.box-image__image {
+  display: block;
+  border-radius: 1rem;
+  width: 100%;
+}
+.box-image__overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: 0.3s ease 0.1s;
+  opacity: 0;
+}
+.overlay__text {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+.main__box-image:hover .box-image__overlay {
+  opacity: 1;
+}
+.main__text {
+  opacity: 0;
+  transform: translateY(-2rem);
+  transition: 0.3s ease 0.1s;
+}
+/* O "~" seleciona o elemento irmao que esta
+no mesmo nivel hierarquico do outro elemento 
+exemplo: 
+<div>
+  <div class="irmao-1"></div>
+  <div class="irmao-2"></div>
+  <div class="irmao-3"></div>
+</div>
+  */
+.main__box-image:hover ~ .main__text {
+  transform: translateY(2rem);
+  opacity: 1;
+}
