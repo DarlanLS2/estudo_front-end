@@ -1,11 +1,10 @@
 # Estudo de front-end
+#### Repositorio para testes
 
-- Repositorio para testes
+- Popup:
 
-- Sidebar:
-
-![./popup/popup.png]
+![imagem-popup](./popup/popup.png)
 
 - Display grid:
 
-![./display-grid/exemplos_simples/exemplo.png]
+![imagem-grid](./display-grid/exemplo_simples/exemplo.png)
