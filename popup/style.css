@@ -10,7 +10,7 @@
   top: 0;
   left: 0;
 
-  display: none; /* displau none faz com que o elemento e as coisas dentro dele nao exista*/
+  display: none; /* display none faz com que o elemento e as coisas dentro dele nao exista*/
   justify-content: center;
   align-items: center;
 }
@@ -19,7 +19,7 @@
   background-color: #FFF;
   padding: 1rem;
   width: 30%;
-  height: 30vh;
+  height: 44vh;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
