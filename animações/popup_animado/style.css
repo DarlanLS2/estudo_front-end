@@ -34,7 +34,7 @@ body {
   animation: 0.3s active ease-out 0.1s normal forwards;
 }
 .popup--disable {
-  animation: 0.2s disable ease-out 0.1s normal;
+  animation: 0.2s disable ease-out 0.1s normal forwards;
 }
 .popup__title {
   margin: 1rem 0;
@@ -70,5 +70,6 @@ body {
   100% {
     visibility: visible; /* Faz o elemento se tornar visivel */
     opacity: 0;
+    display: none;
   }
 }
